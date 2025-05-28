@@ -18,6 +18,20 @@ namespace TerrariaFontGenCLI
          
         private static void Main()
         {
+            Console.Clear();
+            Logo();
+            MainMenu();
+
+            
+
+            //using (var game = new Generator())
+            //{
+            //    game.Run();
+            //}
+        }
+        static void Logo()
+        {
+            //================================= LOGO =================================
             string resourceName = "TerrariaFontGenCLI.Image.ascii_art.logo.txt";
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.OutputEncoding = Encoding.UTF8; // Ensure console can display UTF-8 characters
@@ -27,13 +41,80 @@ namespace TerrariaFontGenCLI
                 string content = reader.ReadToEnd();
                 Console.WriteLine(content);
             }
-            
-            Console.ReadLine();
+        }
+        static void MainMenu()
+        {
+            const int menuTop = 14;
 
-            //using (var game = new Generator())
-            //{
-            //    game.Run();
-            //}
+            while (true)
+            {
+                // In menu
+                Console.SetCursorPosition(0, menuTop);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine(@"
+Select option (Press key):
+1. Select Language.
+2. Compile Fonts.
+3. View Font Load.
+4. Help.
+
+Press Key: ");
+
+                // Đặt con trỏ tại dòng nhập
+                Console.SetCursorPosition(14, Console.CursorTop - 1);
+                ConsoleKeyInfo keyInfo = Console.ReadKey();
+
+                // Xóa vùng menu bằng cách ghi đè trắng lên các dòng
+                for (int i = 0; i < 7; i++)
+                {
+                    Console.SetCursorPosition(0, menuTop + i);
+                    Console.Write(new string(' ', 200));
+                }
+
+                Console.SetCursorPosition(0, menuTop);
+
+                switch (keyInfo.Key)
+                {
+                    case ConsoleKey.D1:
+                        Console.WriteLine(@"
+You selected option 1: Select Language.
+1. English
+2. Vietnamese
+3. Back
+
+Press key:");
+                        Console.SetCursorPosition(14, Console.CursorTop - 1);
+
+                        ConsoleKeyInfo subKey = Console.ReadKey();
+                        
+                        if (subKey.Key == ConsoleKey.D3) continue;
+                        break;
+
+                    case ConsoleKey.D2:
+                        Console.WriteLine("You selected option 2: Compile Fonts.");
+                        break;
+
+                    case ConsoleKey.D3:
+                        Console.WriteLine("You selected option 3: View Font Load.");
+                        break;
+                    case ConsoleKey.D4:
+                        Console.WriteLine("You selected option 4: 4.");
+                        break;
+                    default:
+                        continue;
+                }
+
+                Console.WriteLine("\nPress any key to return to main menu...");
+                Console.ReadKey();
+
+                // Xóa nội dung hiện tại trước khi quay lại menu
+                int linesToClear = 10;
+                for (int i = 0; i < linesToClear; i++)
+                {
+                    Console.SetCursorPosition(0, menuTop + i);
+                    Console.Write(new string(' ', 200));
+                }
+            }
         }
 
         public Generator()
