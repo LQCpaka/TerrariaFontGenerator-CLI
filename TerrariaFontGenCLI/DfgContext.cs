@@ -2,7 +2,7 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace DynamicFontGenerator
+namespace TerrariaFontGenCLI
 {
     public sealed class DfgContext : ContentProcessorContext
     {

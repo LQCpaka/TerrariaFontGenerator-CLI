@@ -7,20 +7,33 @@ using System.IO;
 using System.Reflection;
 using ReLogic.Content.Pipeline;
 using System.Linq;
+using System.Text;
 
-namespace DynamicFontGenerator
+namespace TerrariaFontGenCLI
 {
     public sealed class Generator : Game
     {
         // ReSharper disable once NotAccessedField.Local
         private readonly GraphicsDeviceManager _graphics;
-
+         
         private static void Main()
         {
-            using (var game = new Generator())
+            string resourceName = "TerrariaFontGenCLI.Image.ascii_art.logo.txt";
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.OutputEncoding = Encoding.UTF8; // Ensure console can display UTF-8 characters
+            using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+            using (StreamReader reader = new StreamReader(stream))
             {
-                game.Run();
+                string content = reader.ReadToEnd();
+                Console.WriteLine(content);
             }
+            
+            Console.ReadLine();
+
+            //using (var game = new Generator())
+            //{
+            //    game.Run();
+            //}
         }
 
         public Generator()

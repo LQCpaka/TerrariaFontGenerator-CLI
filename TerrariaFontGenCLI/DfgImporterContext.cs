@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Content.Pipeline;
 using System;
 
-namespace DynamicFontGenerator
+namespace TerrariaFontGenCLI
 {
     public sealed class DfgImporterContext : ContentImporterContext
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework.Content.Pipeline;
 
-namespace DynamicFontGenerator
+namespace TerrariaFontGenCLI
 {
     internal sealed class DfgLogger : ContentBuildLogger
     {
