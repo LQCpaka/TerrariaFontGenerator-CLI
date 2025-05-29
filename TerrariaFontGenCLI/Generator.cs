@@ -8,7 +8,7 @@ using System.Reflection;
 using ReLogic.Content.Pipeline;
 using System.Linq;
 using System.Text;
-
+using System.Diagnostics;
 namespace TerrariaFontGenCLI
 {
     public sealed class Generator : Game
@@ -23,11 +23,6 @@ namespace TerrariaFontGenCLI
             MainMenu();
 
             
-
-            //using (var game = new Generator())
-            //{
-            //    game.Run();
-            //}
         }
         static void Logo()
         {
@@ -86,12 +81,36 @@ Press key:");
                         Console.SetCursorPosition(14, Console.CursorTop - 1);
 
                         ConsoleKeyInfo subKey = Console.ReadKey();
-                        
-                        if (subKey.Key == ConsoleKey.D3) continue;
+
+                        if (subKey.Key == ConsoleKey.D3) {
+                            int linesToClear1 = 10;
+                            for (int i = 0; i < linesToClear1; i++)
+                            {
+                                Console.SetCursorPosition(0, menuTop + i);
+                                Console.Write(new string(' ', 200));
+                            }
+                            continue;
+                        };
                         break;
 
                     case ConsoleKey.D2:
-                        Console.WriteLine("You selected option 2: Compile Fonts.");
+                        using (var game = new Generator())
+                        {
+                            game.Run();
+                        }
+                        Console.WriteLine("Press Enter to return to main menu...");
+
+                        ConsoleKeyInfo subKey2 = Console.ReadKey();
+                        if (subKey2.Key == ConsoleKey.Enter)
+                        {
+                            int linesToClear1 = 10;
+                            for (int i = 0; i < linesToClear1; i++)
+                            {
+                                Console.SetCursorPosition(0, menuTop + i);
+                                Console.Write(new string(' ', 200));
+                            }
+                            continue;
+                        };
                         break;
 
                     case ConsoleKey.D3:
@@ -108,7 +127,7 @@ Press key:");
                 Console.ReadKey();
 
                 // Xóa nội dung hiện tại trước khi quay lại menu
-                int linesToClear = 10;
+                int linesToClear = 14;
                 for (int i = 0; i < linesToClear; i++)
                 {
                     Console.SetCursorPosition(0, menuTop + i);
@@ -144,7 +163,8 @@ Press key:");
 
             CompileFonts();
 
-            Environment.Exit(0);
+            Exit();
+            //Environment.Exit(0);
         }
 
         private void CompileFonts()
