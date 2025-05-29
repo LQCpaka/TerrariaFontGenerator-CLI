@@ -11,6 +11,16 @@
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ 
 </pre>
 
+<p align="center">
+
+  <img src="https://img.shields.io/github/license/LQCpaka/TerrariaFontGenerator-CLI">
+  <img src="https://img.shields.io/badge/XML-Font-blue">
+  <img src="https://img.shields.io/badge/Vietnam-⭐_Vietnamese-blue)">
+  <img src="https://img.shields.io/badge/Languuage-Csharp-blue)">
+  <img src="https://img.shields.io/badge/Application-CLI-blue)">
+
+</p>
+
 # TERRARIA FONT GENERATOR
 
 ```TFG``` made by LQC (LE QUOC CAN) <br>
