@@ -32,7 +32,7 @@ If you have no idea how to create a font that work in Terraria, so this repo is 
 - View Font Load. (Display all font that available)
 - Help. (Simple, redirect you to this repo incase you didn't read the readme)
 
-# INFORMATION - STATISTIC
+## INFORMATION - STATISTIC
 
 <br>
 
