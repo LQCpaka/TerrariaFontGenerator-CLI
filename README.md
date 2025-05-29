@@ -59,7 +59,7 @@ If you have no idea how to create a font that work in Terraria, so this repo is 
 > [!IMPORTANT]
 > Something you need to know before use the TFG!
 
-### **You have to create 5 fonts accordinng 5 fonts in game.**
+### **You have to create 5 fonts according 5 fonts in game.**
 
 - Combat_Crit.xnb
 - Combat_Text.xnb
