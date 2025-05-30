@@ -18,6 +18,7 @@
   <img src="https://img.shields.io/badge/Vietnam-⭐_Vietnamese-blue)">
   <img src="https://img.shields.io/badge/Languuage-Csharp-blue)">
   <img src="https://img.shields.io/badge/Application-CLI-blue)">
+  <img src="https://img.shields.io/badge/Terraria-Font-red")>
 
 </p>
 
