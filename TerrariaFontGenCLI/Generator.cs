@@ -186,7 +186,7 @@ Press key:");
             {
                 var descFileName = Path.GetFileName(descFilePath);
 
-                Console.Write("Start loading description file: {0}", descFileName);
+                Console.Write("Start loading sample font file file: {0}", descFileName);
 
                 var description = _importer.Import(descFilePath, _importContext);
                 Console.WriteLine(" ..Done!");
