@@ -171,7 +171,7 @@ Press key:");
         {
             var descFiles = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.dynamicfont").ToList();
 
-            Console.WriteLine("Description file detected: {0}", descFiles.Count);
+            Console.WriteLine("Total font files detected: {0}", descFiles.Count);
 
             foreach (var descFilePath in descFiles)
             {
