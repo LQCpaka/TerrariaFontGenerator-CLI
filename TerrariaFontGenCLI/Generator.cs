@@ -48,10 +48,10 @@ namespace TerrariaFontGenCLI
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine(@"
 Select option (Press key):
-1. Select Language.
-2. Compile Fonts.
-3. View Font Load.
-4. Help.
+[1] Select Language.
+[2] Compile Fonts.
+[3] View Font Load.
+[4] Help.
 
 Press Key: ");
 
@@ -73,9 +73,9 @@ Press Key: ");
                     case ConsoleKey.D1:
                         Console.WriteLine(@"
 You selected option 1: Select Language.
-1. English
-2. Vietnamese
-3. Back
+[1] English
+[2] Vietnamese
+[3] Back
 
 Press key:");
                         Console.SetCursorPosition(14, Console.CursorTop - 1);
@@ -103,11 +103,11 @@ Press key:");
                         ConsoleKeyInfo subKey2 = Console.ReadKey();
                         if (subKey2.Key == ConsoleKey.Enter)
                         {
-                            int linesToClear1 = 10;
+                            int linesToClear1 = 40;
                             for (int i = 0; i < linesToClear1; i++)
                             {
                                 Console.SetCursorPosition(0, menuTop + i);
-                                Console.Write(new string(' ', 200));
+                                Console.Write(new string(' ', 40));
                             }
                             continue;
                         };
