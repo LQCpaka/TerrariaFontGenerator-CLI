@@ -72,7 +72,7 @@ Press Key: ");
                 {
                     case ConsoleKey.D1:
                         Console.WriteLine(@"
-You selected option 1: Select Language.
+You selected [1]: Select Language.
 [1] English
 [2] Vietnamese
 [3] Back
