@@ -13,7 +13,8 @@
 		-->
 		<Size>30</Size>
 		
-		<!--
+		<!-- 
+		30px 16px 16px 16px iirc
 		Spacing is a float value, measured in pixels. Modify this value to change
 		the amount of spacing in between characters.
 		-->
