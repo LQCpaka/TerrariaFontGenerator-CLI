@@ -55,6 +55,7 @@
 		The characters are ordered according to the Unicode standard.
 		
 		Character regions may also override the default FontName, Size, and Style. (See above for details)
+		Im going to add the chinese type set back asap
 		-->
 		<CharacterRegions>
 
