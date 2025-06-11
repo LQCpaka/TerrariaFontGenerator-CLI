@@ -4,6 +4,7 @@
 	<Asset Type="Graphics:DynamicFontDescription">
 		<!--
 		Modify this string to change the default font that will be imported.
+		YOU SHOULD HAVE THE FONT THAT INSTALLED IN YOUR SYSTEM FONTS DIRECTORY TO USE THIS
 		-->
 		<FontName>Andy</FontName>
 		
