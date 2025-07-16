@@ -35,21 +35,23 @@
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TerrariaFontGeneratorCLI\lib\Microsoft.Xna.Framework.dll</HintPath>
+      <HintPath>libs\Microsoft.Xna.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline">
-      <HintPath>..\..\TerrariaFontGeneratorCLI\lib\Microsoft.Xna.Framework.Content.Pipeline.dll</HintPath>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\Microsoft.Xna.Framework.Content.Pipeline.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TerrariaFontGeneratorCLI\lib\Microsoft.Xna.Framework.Game.dll</HintPath>
+      <HintPath>libs\Microsoft.Xna.Framework.Game.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TerrariaFontGeneratorCLI\lib\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+      <HintPath>libs\Microsoft.Xna.Framework.Graphics.dll</HintPath>
     </Reference>
-    <Reference Include="ReLogic.Content.Pipeline">
-      <HintPath>..\..\TerrariaFontGeneratorCLI\lib\ReLogic.Content.Pipeline.dll</HintPath>
+    <Reference Include="ReLogic.Content.Pipeline, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\ReLogic.Content.Pipeline.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

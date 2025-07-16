@@ -1,14 +1,14 @@
 ﻿using System;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 using System.IO;
 using System.Reflection;
 using ReLogic.Content.Pipeline;
 using System.Linq;
 using System.Text;
-using System.Diagnostics;
+
 namespace TerrariaFontGenCLI
 {
     public sealed class Generator : Game
@@ -46,14 +46,14 @@ namespace TerrariaFontGenCLI
                 // In menu
                 Console.SetCursorPosition(0, menuTop);
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine(@"
-Select option (Press key):
-[1] Select Language.
-[2] Compile Fonts.
-[3] View Font Load.
-[4] Help.
+                
+                Console.WriteLine("★ SELECT OPTION (PRESS KEY): ★\n");
 
-Press Key: ");
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("[1] Select Language. \n[2] Compile Fonts. \n[3] View Font Load. \n[4] Help. \n");
+                Console.ResetColor();
+                
+                Console.WriteLine("➢ Press Key:");
 
                 // Đặt con trỏ tại dòng nhập
                 Console.SetCursorPosition(14, Console.CursorTop - 1);
@@ -71,13 +71,13 @@ Press Key: ");
                 switch (keyInfo.Key)
                 {
                     case ConsoleKey.D1:
-                        Console.WriteLine(@"
-You selected [1]: Select Language.
-[1] English
-[2] Vietnamese
-[3] Back
+                        Console.WriteLine("You selected [1]: Select Language.");
 
-Press key:");
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.WriteLine("\n[1] English \n[2] Vietnamese \n[3] Back \n");
+                        Console.ResetColor();
+
+                        Console.WriteLine("Press key:");
                         Console.SetCursorPosition(14, Console.CursorTop - 1);
 
                         ConsoleKeyInfo subKey = Console.ReadKey();
@@ -87,7 +87,7 @@ Press key:");
                             for (int i = 0; i < linesToClear1; i++)
                             {
                                 Console.SetCursorPosition(0, menuTop + i);
-                                Console.Write(new string(' ', 200));
+                                Console.Write(new string(' ', Console.BufferWidth));
                             }
                             continue;
                         };
@@ -106,15 +106,28 @@ Press key:");
                             int linesToClear1 = 40;
                             for (int i = 0; i < linesToClear1; i++)
                             {
-                                Console.SetCursorPosition(0, menuTop + i);
-                                Console.Write(new string(' ', 40));
+                                int targetLine = menuTop + i;
+                                if (targetLine < Console.BufferHeight)
+                                {
+                                    Console.SetCursorPosition(0, targetLine);
+                                    Console.Write(new string(' ', Console.BufferWidth));
+                                }
                             }
                             continue;
                         };
                         break;
 
                     case ConsoleKey.D3:
-                        Console.WriteLine("You selected option 3: View Font Load.");
+                        Console.WriteLine("YOU SELECTED [3]: VIEW FONT LOAD.\n");
+                        
+                        var totalXMLFile = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.xml").Count();
+                        var totalXNBFile = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.xnb").Count();
+                        
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine($"Total XNL files: {totalXMLFile}");
+                        Console.WriteLine($"Total XNB files: {totalXNBFile}");
+                        Console.ResetColor();
+
                         break;
                     case ConsoleKey.D4:
                         Console.WriteLine("You selected option 4: 4.");
@@ -131,7 +144,7 @@ Press key:");
                 for (int i = 0; i < linesToClear; i++)
                 {
                     Console.SetCursorPosition(0, menuTop + i);
-                    Console.Write(new string(' ', 200));
+                    Console.Write(new string(' ', Console.BufferWidth));
                 }
             }
         }
@@ -169,7 +182,7 @@ Press key:");
 
         private void CompileFonts()
         {
-            var descFiles = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.dynamicfont").ToList();
+            var descFiles = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.xml").ToList();
 
             Console.WriteLine("Total font files detected: {0}", descFiles.Count);
 

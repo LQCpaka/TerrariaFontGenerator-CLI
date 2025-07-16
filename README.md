@@ -68,6 +68,10 @@ If you have no idea how to create a font that work in Terraria, so this repo is 
 - Item_Stack.xnb
 - Mouse_Text.xnb
 
+> You may need the sample font (.xml) font, you can download my sample font via "Release" or you could clone the repo, there is a sample font in folder "xml-font". 
+> Once you got the sample, you cant use that into terraria now. Open it (You can open with Notepad or Notepad++) edit and select the font, remember the name font is the font that you are installed into your computer, check Fonts folder to see which name and paste it into font name"
+> Grab the sample font (or you can rename it into according font above)  paste into the same place (root) of application. After that open the open, select compile. Thats all.
+
 > There is no exact value, pixel for the font, you have to do it your own. Compile it and test it in the game. All 5 .xnb fonts file use 1 font by default but just different font size.<br><br>
 > If you see a small windows suddenly display after done compile progress, don't panic, its just a part of application - XNA frammework. Cuz its opensource, so you can check in my source
 
