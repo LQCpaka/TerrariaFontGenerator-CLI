@@ -124,7 +124,7 @@ namespace TerrariaFontGenCLI
                         var totalXNBFile = Directory.EnumerateFiles(Environment.CurrentDirectory, "*.xnb").Count();
                         
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.WriteLine($"Total XNL files: {totalXMLFile}");
+                        Console.WriteLine($"Total XML files: {totalXMLFile}");
                         Console.WriteLine($"Total XNB files: {totalXNBFile}");
                         Console.ResetColor();
 
